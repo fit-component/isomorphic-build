@@ -1,12 +1,11 @@
 // @babel ignore
 const path = require('path')
-const assign = require('object-assign')
 const commonConfig = require('./lib/config/common')
 const basicConfig = require('./lib/config/basic')
 const productionConfig = require('./lib/config/production')
 
 const build = module.exports = function (fis, config) {
-    config = assign({
+    config = Object.assign({
         // 模块名
         modName: 'react',
 
