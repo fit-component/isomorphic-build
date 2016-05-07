@@ -29,18 +29,17 @@ module.exports = function (config, build, fis) {
         ignoreDevDependencies: true
     })
 
-    // typescript 解析
     fis.match('/client/**.{jsx,tsx}', {
         rExt  : 'js',
-        parser: fis.plugin('typescript', {
-            module: 1,
-            target: 0
-        })
-    })
-
-    // html namespace 处理
-    fis.match('*.tsx:html', {
-        parser: fis.plugin(build.parser.wrapComponent),
+        parser: [
+            // typescript 解析
+            fis.plugin('typescript', {
+                module: 1,
+                target: 0
+            }),
+            // html namespace 处理
+            fis.plugin(build.parser.wrapComponent)
+        ]
     })
 
     // 修改发布路径
