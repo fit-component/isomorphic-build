@@ -1,0 +1,20 @@
+{
+  "name": "fit-isomorphic-build",
+  "version": "0.0.2",
+  "description": "同构编译脚本",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.baidu.com/tb-component/isomorphic-build.git"
+  },
+  "keywords": [
+    "react",
+    "fit"
+  ],
+  "author": "tieba",
+  "license": "ISC",
+  "dependencies": {}
+}
