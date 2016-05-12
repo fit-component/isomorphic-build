@@ -3,9 +3,10 @@ const path = require('path')
 const commonConfig = require('./lib/config/common')
 const basicConfig = require('./lib/config/basic')
 const productionConfig = require('./lib/config/production')
+const assign = require('object-assign')
 
 const build = module.exports = function (fis, config) {
-    config = Object.assign({
+    config = assign({
         // 模块名
         modName: 'react',
 
