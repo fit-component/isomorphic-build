@@ -152,13 +152,7 @@ const build = module.exports = function (fis, config) {
     const production = fis.media('production')
     basicConfig(production, config, build, fis)
     productionConfig(production, config, build, fis)
-
-    // 修改发布路径
-    production.match('client/(**)', {
-        id      : '$1',
-        moduleId: '${namespace}:$1',
-        release : '/n/${static}/${namespace}/$1'
-    })
+    
     production.match('*.tar.gz', {
         release: '$0'
     })
