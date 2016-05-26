@@ -19,7 +19,7 @@ module.exports = function (media, config, build, fis) {
     })
 
     // 处理 js 中 css 等引用
-    media.match('*.tsx', {
+    media.match('*.{js,jsx,es,ts,tsx}', {
         preprocessor: [
             fis.plugin('js-require-css'),
             fis.plugin('js-require-file', {
