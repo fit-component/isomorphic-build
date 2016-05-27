@@ -146,7 +146,7 @@ const build = module.exports = function (fis, config) {
             },
 
             fis.plugin('http-push', {
-                receiver: config.host + '/yog/uploadtar',
+                receiver: 'http://' + config.otpIp + '/' + config.otpPort + '/yog/uploadtar',
                 to      : '/'
             })
         ]
