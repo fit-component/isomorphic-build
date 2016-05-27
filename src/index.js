@@ -138,8 +138,15 @@ const build = module.exports = function (fis, config) {
             fis.plugin('skip-packed'),
             fis.plugin('encoding'),
 
+            // 打成一个包发送过去
+            function (options, modified, total, next) {
+                return fis.require('deploy-tar')({
+                    filename: 'all.tar'
+                }, modified, total, next)
+            },
+
             fis.plugin('http-push', {
-                receiver: config.host + '/yog/upload',
+                receiver: config.host + '/yog/uploadtar',
                 to      : '/'
             })
         ]
