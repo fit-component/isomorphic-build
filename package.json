@@ -1,6 +1,6 @@
 {
   "name": "fit-isomorphic-build",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "同构编译脚本",
   "main": "lib/index.js",
   "scripts": {
