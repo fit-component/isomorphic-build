@@ -152,7 +152,7 @@ const build = module.exports = function (fis, config) {
     const production = fis.media('production')
     basicConfig(production, config, build, fis)
     productionConfig(production, config, build, fis)
-    
+
     production.match('*.tar.gz', {
         release: '$0'
     })
