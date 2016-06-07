@@ -1,6 +1,6 @@
 {
   "name": "fit-isomorphic-build",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "同构编译脚本",
   "main": "lib/index.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "fis3-deploy-skip-packed": "0.0.5",
     "fis3-deploy-tar": "^1.0.1",
     "fis3-hook-commonjs": "^0.1.15",
-    "fis3-hook-node_modules": "^2.0.17",
+    "fis3-hook-node_modules": "^2.2.3",
     "fis3-packager-deps-pack": "0.0.2",
     "fis3-parser-typescript": "^0.2.4",
     "fis3-postpackager-loader": "^1.3.17",
