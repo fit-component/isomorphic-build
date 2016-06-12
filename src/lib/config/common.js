@@ -47,6 +47,10 @@ module.exports = function (config, build, fis) {
         release: 'all.tar'
     })
 
+    fis.match('*.{swf,png,gif,jpg,jpeg,svg,ttf,eot,woff,woff2,flv,f4v,cur}', {
+        release: '/static/${build.modName}/$0'
+    })
+
     /**
      * client: 额外处理
      */
