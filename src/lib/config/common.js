@@ -56,6 +56,8 @@ module.exports = function (config, build, fis) {
      */
     fis.match('/client/(**)', {
         postprocessor: function (content, file, settings) {
+            if (file.rExt !== 'js' || file.rExt !== 'jsx' || file.rExt !== 'ts' || file.rExt !== 'tsx') return content
+
             const contentArray = content.split('\n')
 
             // 将 server 去除
