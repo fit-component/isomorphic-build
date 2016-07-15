@@ -191,3 +191,5 @@ const build = module.exports = function (fis, config) {
 
 build.parser = require('./lib/parser')
 build.deploy = require('./lib/deploy')
+
+fis.get('project.ignore').push('node_modules/**');
