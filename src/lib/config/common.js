@@ -76,6 +76,10 @@ module.exports = function (config, build, fis) {
      */
     fis.match('/server/(**)', {
         postprocessor: function (content, file, settings) {
+            if (file.ext !== 'tsx' || file.ext !== 'ts' || file.ext !== 'jsx' || file.ext !== 'js') {
+                return content
+            }
+
             const contentArray = content.split('\n')
 
             // 将引入 client 换成上级目录
